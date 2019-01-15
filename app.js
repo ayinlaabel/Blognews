@@ -1,15 +1,24 @@
-var express = require(express);
+var express = require('express');
 var path = require('path');
 var bodyparser = require('body-parser');
+var mongoose = require('mongoose');
+
+//Connect to DB
+mongoose.connect('mongodb://localhost/blog');
 
 //Init App
 var app = express();
 
 //BodyParser Middleware
+app.use(bodyparser.urlencoded({extended: false}));
+app.use(bodyparser.json());
+
+//Public Folder as Satic Folder
+app.use(express.static(path.join(__dirname, 'public')));
 
 //Views Engine
-app.use('views', path.join(__dirname,'views'));
-app.use('view engine', 'pug');
+app.set('views', path.join(__dirname,'views'));
+app.set('view engine', 'pug');
 
 //Home Route
 app.get('/', function (req, res) {
