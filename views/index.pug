@@ -5,8 +5,10 @@ block content
     .container
         .row
             .col-md-8
-                //- ul
-                //-     each article, i in articles
-                //-         li= article.title
+                ul.list-group
+                    each article, i in articles
+                        li.list-group-item
+                            a(href='/article/'+article._id)= article.title
+                        //- li= article.pgOne
             .col-md-4
                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ullam aspernatur commodi, expedita et necessitatibus eligendi, cumque eos quod tempora praesentium qui eum suscipit perferendis sint in! Illo, ea harum?

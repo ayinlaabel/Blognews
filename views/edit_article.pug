@@ -4,27 +4,27 @@ block content
     br
     .container
         .offset-md-3
-        form(action="/article/add_foreginNews", method="POST")
+        form(action="/article/edit/"+article._id, method="POST")
             #form-group
                 label(for="title")  Title
-                input.form-control(type="text", name="title")
+                input.form-control(type="text", name="title", value=article.title)
             #form-group
                 label(for="author")  Author
-                input.form-control(type="text", name="author")
+                input.form-control(type="text", name="author", value= article.author)
             //- #form-group
                 label(for="pgOne")  Summary
                 textarea.form-control(name="pgOne", cols="30", rows="10")
             #form-group 
                 label(for="pgTwo")  Paragraph One
-                textarea.form-control(name="pgOne", cols="30", rows="10")
+                textarea.form-control(name="pgOne", cols="30", rows="10")= article.pgOne
             #form-group 
                 label(for="pgTwo")  Paragraph Two
-                textarea.form-control(name="pgTwo", cols="30", rows="10")
+                textarea.form-control(name="pgTwo", cols="30", rows="10")= article.pgTwo
             #form-group
                 label(for="pgThree")  Paragraph Three
-                textarea.form-control(name="pgThree", cols="30", rows="10")
+                textarea.form-control(name="pgThree", cols="30", rows="10")= article.pgThree
             #form-group
                 label(for="pgFour")  Paragraph Four
-                textarea.form-control(name="pgFour", cols="30", rows="10")
+                textarea.form-control(name="pgFour", cols="30", rows="10")= article.pgFour
             br
-            button.btn.btn-primary  Submit
+            button.btn.btn-primary  Update

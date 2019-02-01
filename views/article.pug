@@ -2,5 +2,14 @@ extends header
 
 block content
     .container
-        each article, i in articles
-            h1= article.title
+        h4= article.title
+        h5 posted by #{article.author}
+        p= article.pgOne
+        p= article.pgTwo
+        p= article.pgThree
+        p= article.pgFour
+        br
+        a(href='/article/edit/'+article._id).btn.btn-primary    Edit
+        a(href='#', data-id=article._id).btn.btn-danger.deleteArticle   Delete
+
+        

@@ -4,32 +4,33 @@ html
         title
         link(rel="stylesheet", href="/bootstrap/css/bootstrap.css")
     body
-        nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
-            a.navbar-brand(href='/') BLOGER NEWS
-            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavDropdown', aria-controls='navbarNavDropdown', aria-expanded='false', aria-label='Toggle navigation')
-                span.navbar-toggler-icon
-            #navbarNavDropdown.collapse.navbar-collapse.justify-content-end
-                ul.navbar-nav
-                    li.nav-item
-                        a.nav-link(href='/')    Home 
-                        span.sr-only (current)
-                    li.nav-item.dropdown
-                        a#navbarDropdownMenuLink.nav-link(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')    Add Article
-                        .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
-                            a.dropdown-item(href='/article/add_article') News
-                            a.dropdown-item(href='/article/add_localNews') Local News
-                            a.dropdown-item(href='/article/add_foreginNews') Foregin News
-                            a.dropdown-item(href='article/add_worldNews') World News
-                    li.nav-item.dropdown
-                        a#navbarDropdownMenuLink.nav-link(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')    News
-                        .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
-                            a.dropdown-item(href='#') Local News
-                            a.dropdown-item(href='#') Foregin News
-                            a.dropdown-item(href='#') World News
-                    li.nav-item
-                        a.nav-link(href='#') About
-                    li.nav-item
-                        a.nav-link(href='#') FAQ
+            nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+                a.navbar-brand(href='/') BLOGER NEWS
+                button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavDropdown', aria-controls='navbarNavDropdown', aria-expanded='false', aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarNavDropdown.collapse.navbar-collapse.justify-content-end
+                    ul.navbar-nav
+                        li.nav-item
+                            a.nav-link(href='/')    Home 
+                            span.sr-only (current)
+                        li.nav-item.dropdown
+                            a#navbarDropdownMenuLink.nav-link(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')    Add Article
+                            .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                                a.dropdown-item(href='/article/add_article') News
+                                a.dropdown-item(href='/article/add_sportNews') Sport News
+                                a.dropdown-item(href='article/add_worldNews') World News
+                                a.dropdown-item(href='/article/add_Weather') Weather Forecast
+                        li.nav-item.dropdown
+                            a#navbarDropdownMenuLink.nav-link(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')    News
+                            .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                                a.dropdown-item(href='/article/articleNews') News
+                                a.dropdown-item(href='/article/sportNews') Sport News
+                                a.dropdown-item(href='#') World News
+                                a.dropdown-item(href='/article/weatherArticle') Weather Forecast
+                        li.nav-item
+                            a.nav-link(href='#') About
+                        li.nav-item
+                            a.nav-link(href='#') FAQ
 
         block content
         br
@@ -39,3 +40,4 @@ html
     
     script(src="/bootstrap/js/jquery.js")
     script(src="/bootstrap/js/bootstrap.js")
+    script(src="/bootstrap/js/delete.js")

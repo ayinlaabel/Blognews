@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var foreginSchema = mongoose.Schema({
+var weatherSchema = mongoose.Schema({
     title:{
         type: String,
         required: true
@@ -27,4 +27,4 @@ var foreginSchema = mongoose.Schema({
     }
 });
 
-var ForeginNews = module.exports = mongoose.model('ForeginNews', foreginSchema);
+var WeatherNews = module.exports = mongoose.model('WeatherNews', weatherSchema);

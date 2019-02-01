@@ -1,0 +1,10 @@
+extends header
+
+block content
+    br
+    .container
+        ul.list-group
+            each article, i in articles
+                li.list-group-item
+                    a(href='/article/'+article._id)= article.title
+                    p= article.pgOne

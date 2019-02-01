@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var localSchema = mongoose.Schema({
+var sportSchema = mongoose.Schema({
     title:{
         type: String,
         required: true
@@ -27,4 +27,4 @@ var localSchema = mongoose.Schema({
     }
 });
 
-var LocalNews = module.exports = mongoose.model('LocalNews', localSchema);
+var SportNews = module.exports = mongoose.model('SportNews', sportSchema);

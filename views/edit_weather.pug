@@ -1,0 +1,30 @@
+extends header
+
+block content
+    br
+    .container
+        .offset-md-3
+        form(action="/article/edit/weatherArticle", method="POST")
+            #form-group
+                label(for="title")  Title
+                input.form-control(type="text", name="title")
+            #form-group
+                label(for="author")  Author
+                input.form-control(type="text", name="author")
+            //- #form-group
+                label(for="pgOne")  Summary
+                textarea.form-control(name="pgOne", cols="30", rows="10")
+            #form-group 
+                label(for="pgTwo")  Paragraph One
+                textarea.form-control(name="pgOne", cols="30", rows="10")
+            #form-group 
+                label(for="pgTwo")  Paragraph Two
+                textarea.form-control(name="pgTwo", cols="30", rows="10")
+            #form-group
+                label(for="pgThree")  Paragraph Three
+                textarea.form-control(name="pgThree", cols="30", rows="10")
+            #form-group
+                label(for="pgFour")  Paragraph Four
+                textarea.form-control(name="pgFour", cols="30", rows="10")
+            br
+            button.btn.btn-primary  Submit

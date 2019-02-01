@@ -14,7 +14,7 @@ db.on('open', function () {
 });
 
 //Check db error
-db.once('once', function (err) {
+db.once('error', function (err) {
     console.log(err);
 });
 
@@ -23,7 +23,7 @@ db.once('once', function (err) {
 var app = express();
 
 //Bring in Models
-var Article = require('./models/article');
+var Arti = require('./models/article');
 
 //BodyParser Middleware
 app.use(bodyParser.urlencoded({extended: false}));
@@ -38,16 +38,16 @@ app.set('view engine', 'pug');
 
 //Home Route
 app.get('/', function (req, res) {
-    // Article.find({}, function (err, articles) {
-    //     if (err) {
-    //         console.log(err);
-    //     }else{
-    //         res.render('index',{
-    //             // articles:articles
-    //         });
-    //     }
-    // });
-    res.render('index')
+    Arti.find ({}, function (err, articles) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render('index', {
+                articles : articles
+            });
+        }
+    });
+    
 });
 
 //Roues

@@ -1,0 +1,14 @@
+extends header
+
+block content
+    br
+    .container
+        h1= article.title
+        b
+            p written by #{article.author}
+        p= article.pgOne
+        p= article.pgTwo
+        p= article.pgThree
+        p= article.pgFour
+        a(href='/article/edit/weatherArticle/'+article._id).btn.btn-primary Edit
+        a(href='', data-id=article._id).btn.btn-danger.deleteWeather Delete

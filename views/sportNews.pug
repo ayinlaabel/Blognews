@@ -1,0 +1,9 @@
+extends header
+
+block content
+    .container
+        br
+        ul.list-group
+            each article, i in articles
+                li.list-group-item
+                    a(href='/article/sportNews/'+article._id)= article.title
